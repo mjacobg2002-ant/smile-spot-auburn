@@ -195,13 +195,13 @@ body.menu-open{overflow:hidden}
 .hero__vsep{width:1px;height:20px;background:rgba(255,255,255,.3)}
 
 /* ===== STATS BAND ===== */
-.stats{position:relative;overflow:hidden;background:var(--brand-gradient)}
-.stats::before{content:"";position:absolute;inset:0;opacity:.4;background:radial-gradient(80% 120% at 0% 0%,rgba(255,255,255,.14),transparent 55%)}
+.stats{position:relative;overflow:hidden;background:linear-gradient(135deg,#8cccff 0%,#7cc4ff 50%,#64b5f3 100%)}
+.stats::before{content:"";position:absolute;inset:0;opacity:.5;background:radial-gradient(80% 120% at 0% 0%,rgba(255,255,255,.28),transparent 55%)}
 .stats__grid{position:relative;max-width:var(--wrap);margin:0 auto;padding:1.15rem var(--gutter);display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
-.stat{text-align:center;color:#fff}
-.stat .v{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1}
-.stat .v span{color:var(--champagne)}
-.stat .l{margin-top:.6rem;font-size:.88rem;color:rgba(255,255,255,.82);font-weight:500}
+.stat{text-align:center;color:var(--navy-900)}
+.stat .v{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1;color:var(--navy-900)}
+.stat .v span{color:#d6601c}
+.stat .l{margin-top:.6rem;font-size:.88rem;color:rgba(10,22,38,.72);font-weight:600}
 
 /* ===== SECTION SHELL ===== */
 .section{padding:clamp(4rem,9vh,7rem) 0}
@@ -573,11 +573,22 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<!-- ===== GALLERY ===== -->
-<!-- ===== OFFICE GALLERY =====
-     Removed until real office photos exist. To re-enable, drop
-     office-1.jpg / office-2.jpg / office-3.jpg into assets/img and
-     restore the <section class="section gallery"> block (see git history). -->
+<!-- ===== GALLERY =====
+     NOTE: office-1/2/3.jpg are tasteful stock placeholders (Unsplash) to
+     convey care & bright smiles. Swap with real office/patient photos. -->
+<section class="section gallery">
+  <div class="container-x">
+    <div class="services__head reveal">
+      <span class="eyebrow">Smiles we care for</span>
+      <h2 class="section-title" style="margin-top:1rem">Healthy, happy smiles.</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="figpanel ratio-1-1 reveal"><img src="assets/img/office-1.jpg" alt="Gentle dental care in the chair" onerror="this.style.display='none'" /></figure>
+      <figure class="figpanel ratio-1-1 reveal"><img src="assets/img/office-2.jpg" alt="A happy, confident smile" onerror="this.style.display='none'" /></figure>
+      <figure class="figpanel ratio-1-1 reveal"><img src="assets/img/office-3.jpg" alt="Bright, healthy teeth" onerror="this.style.display='none'" /></figure>
+    </div>
+  </div>
+</section>
 
 <!-- ===== WHY CHOOSE US =====
      Replace with real patient reviews when available (see git history for the
