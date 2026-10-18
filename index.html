@@ -19,7 +19,7 @@
        General, Cosmetic & Implant Dentistry         e.g. General & Cosmetic Dentistry
        Dr. Dan Ashouripour, D.D.S.     e.g. Dr. Jane Smith, DDS
        General Dentist — Implant & Cosmetic Dentistry     e.g. General & Cosmetic Dentist
-       A Medical College of Virginia graduate with over 20 years of dentistry experience and extensive training in implant dentistry    e.g. West Point graduate & Army veteran  (or any credibility line)
+       Family, cosmetic, implant &amp; hygiene dentistry with Dr. Tatum &amp; Dr. Cox    e.g. West Point graduate & Army veteran  (or any credibility line)
        2011           e.g. 2009
        (703) 729-7900           e.g. (703) 555-0100   (display)
        +17037297900       e.g. +17035550100     (digits only, for tel:)
@@ -66,7 +66,8 @@
   "url": "https://www.thesmilespotofauburn.com/",
   "telephone": "+13347456393",
   "priceRange": "$$",
-  "areaServed": "Auburn, Opelika & the greater Auburn area, Alabama",
+  "address": {"@type":"PostalAddress","streetAddress":"2900 East University Drive, Suite 110","addressLocality":"Auburn","addressRegion":"AL","postalCode":"36830","addressCountry":"US"},
+  "areaServed": "Auburn & the greater Auburn area, Alabama",
   "employee": [
     {"@type":"Dentist","name":"Dr. Crawford A. Tatum Jr., DMD"},
     {"@type":"Dentist","name":"Dr. Christina Cox, DMD"}
@@ -177,7 +178,7 @@ body.menu-open{overflow:hidden}
 .hero{position:relative;overflow:hidden;background:var(--navy-900)}
 .hero__bg{position:absolute;inset:0;z-index:0}
 .hero__bg img,.hero__bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,22,38,.92) 0%,rgba(10,22,38,.6) 45%,rgba(10,22,38,.3) 100%),linear-gradient(0deg,rgba(10,22,38,.75),transparent 45%)}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,22,38,.9) 0%,rgba(10,22,38,.55) 44%,rgba(10,22,38,.2) 100%),linear-gradient(180deg,rgba(10,22,38,.6),transparent 16%),linear-gradient(0deg,rgba(10,22,38,.55),transparent 42%)}
 .hero__fallback{position:absolute;inset:0;background:radial-gradient(70% 70% at 82% 12%,rgba(255,145,102,.28),transparent 55%),radial-gradient(80% 80% at 15% 90%,rgba(46,155,255,.35),transparent 60%),linear-gradient(145deg,#0f2a4a 0%,var(--navy-900) 60%,#060d18 115%)}
 .hero__in{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter);min-height:88vh;display:flex;align-items:center}
 .hero__copy{max-width:640px;color:#fff;padding:8rem 0 4rem}
@@ -196,7 +197,7 @@ body.menu-open{overflow:hidden}
 /* ===== STATS BAND ===== */
 .stats{position:relative;overflow:hidden;background:var(--brand-gradient)}
 .stats::before{content:"";position:absolute;inset:0;opacity:.4;background:radial-gradient(80% 120% at 0% 0%,rgba(255,255,255,.14),transparent 55%)}
-.stats__grid{position:relative;max-width:var(--wrap);margin:0 auto;padding:3rem var(--gutter);display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.stats__grid{position:relative;max-width:var(--wrap);margin:0 auto;padding:1.15rem var(--gutter);display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 .stat{text-align:center;color:#fff}
 .stat .v{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1}
 .stat .v span{color:var(--champagne)}
@@ -374,7 +375,7 @@ body.menu-open{overflow:hidden}
   <div class="utility__in">
     <span class="utility__status"><span class="dot"></span> Now accepting new patients</span>
     <div class="utility__right">
-      <span class="utility__hours">Auburn &amp; Opelika, AL · 96 years of care</span>
+      <span class="utility__hours">Auburn, AL · 96 years of care</span>
       <a href="tel:+13347456393">334-745-6393</a>
     </div>
   </div>
@@ -446,7 +447,7 @@ body.menu-open{overflow:hidden}
       </div>
       <div class="hero__rating">
         <!-- EDIT: credibility line (or remove) -->
-        <span class="hero__cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>Family, cosmetic &amp; implant dentistry from two trusted doctors, Dr. Tatum &amp; Dr. Cox</span>
+        <span class="hero__cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>Family, cosmetic, implant &amp; hygiene dentistry with Dr. Tatum &amp; Dr. Cox</span>
       </div>
     </div>
   </div>
@@ -457,7 +458,7 @@ body.menu-open{overflow:hidden}
   <div class="stats__grid">
     <!-- EDIT: your real numbers -->
     <div class="stat"><div class="v">96<span> yrs</span></div><div class="l">Of Trusted Care in the Area</div></div>
-    <div class="stat"><div class="v">2<span></span></div><div class="l">Experienced Dentists</div></div>
+    <div class="stat"><div class="v">Full<span>-Service</span></div><div class="l">Hygiene &amp; Dentistry</div></div>
     <div class="stat"><div class="v">All<span> Ages</span></div><div class="l">Family-Friendly Care</div></div>
     <div class="stat"><div class="v">New<span> Patients</span></div><div class="l">Always Welcome</div></div>
   </div>
@@ -530,7 +531,7 @@ body.menu-open{overflow:hidden}
     <div class="services__head reveal">
       <span class="eyebrow">Meet your dentists</span>
       <h2 class="section-title" style="margin-top:1rem">Dr. Tatum &amp; Dr. Cox.</h2>
-      <p class="lead" style="margin-top:1rem">Two experienced doctors leading The Smile Spot of Auburn — delivering caring, technologically advanced dentistry the whole family can trust.</p>
+      <p class="lead" style="margin-top:1rem">The experienced team leading The Smile Spot of Auburn — delivering caring, technologically advanced dentistry and hygiene the whole family can trust.</p>
     </div>
     <div class="founders-grid">
       <!-- EDIT: to use real headshots, replace the monogram <div> with
@@ -592,8 +593,8 @@ body.menu-open{overflow:hidden}
     <span class="eyebrow reveal">Why patients choose us</span>
     <h2 class="section-title reveal" style="margin-top:1rem">A practice Auburn has trusted for generations.</h2>
     <div class="svc-grid" style="margin-top:2.6rem;text-align:left">
-      <article class="svc card-surface reveal"><div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div><h3>96 years of care</h3><p>Nearly a century of trusted dentistry in the Auburn and Opelika area — experience you can feel at every visit.</p></article>
-      <article class="svc card-surface reveal"><div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11a4 4 0 1 0-8 0M3 20a7 7 0 0 1 18 0"/><circle cx="12" cy="7" r="4"/></svg></div><h3>Two experienced doctors</h3><p>Dr. Tatum and Dr. Cox bring general, cosmetic, and surgical expertise under one roof.</p></article>
+      <article class="svc card-surface reveal"><div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div><h3>96 years of care</h3><p>Nearly a century of trusted dentistry in the Auburn area — experience you can feel at every visit.</p></article>
+      <article class="svc card-surface reveal"><div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11a4 4 0 1 0-8 0M3 20a7 7 0 0 1 18 0"/><circle cx="12" cy="7" r="4"/></svg></div><h3>Dental &amp; hygiene care</h3><p>From routine cleanings to implants, your whole family's care is handled under one roof.</p></article>
       <article class="svc card-surface reveal"><div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 5 6 11a6 6 0 0 1-12 0c0-6 6-11 6-11Z"/></svg></div><h3>Comfort made easy</h3><p>Sedation options and a gentle, patient-first approach make even nervous visits relaxed.</p></article>
     </div>
   </div>
@@ -632,17 +633,17 @@ body.menu-open{overflow:hidden}
   <div class="container-x two-col">
     <div class="reveal">
       <span class="eyebrow">Visit us</span>
-      <h2 class="section-title" style="margin-top:1rem">Conveniently located for Auburn.</h2>
-      <p class="lead" style="margin-top:1rem">Find us at 614 Avenue A in Opelika — just minutes from Auburn, with easy parking and a warm welcome waiting. New patients of all ages are welcome.</p>
+      <h2 class="section-title" style="margin-top:1rem">Conveniently located in Auburn.</h2>
+      <p class="lead" style="margin-top:1rem">Find us at 2900 East University Drive, Suite 110 in Auburn — with easy parking and a warm welcome waiting. New patients of all ages are welcome.</p>
       <dl class="loc-meta">
-        <div><dt>Address</dt><dd>614 Avenue A<br />Opelika, AL 36801</dd></div>
+        <div><dt>Address</dt><dd>2900 East University Drive, Suite 110<br />Auburn, AL 36830</dd></div>
         <div><dt>Phone</dt><dd><a href="tel:+13347456393">334-745-6393</a></dd></div>
         <!-- EDIT: office hours not published on source site — confirm [VERIFY] -->
         <div><dt>Hours</dt><dd>Call for current hours</dd></div>
       </dl>
       <a class="btn btn-primary" href="tel:+13347456393">Call 334-745-6393</a>
     </div>
-    <iframe class="gmap reveal" title="The Smile Spot of Auburn on Google Maps" src="https://www.google.com/maps?q=614%20Avenue%20A%2C%20Opelika%2C%20AL%2036801&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <iframe class="gmap reveal" title="The Smile Spot of Auburn on Google Maps" src="https://www.google.com/maps?q=2900%20East%20University%20Drive%20Suite%20110%2C%20Auburn%2C%20AL%2036830&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
   </div>
 </section>
 </main>
@@ -653,12 +654,12 @@ body.menu-open{overflow:hidden}
     <div class="footer__brand">
       <img src="assets/img/logo-white.png" alt="The Smile Spot of Auburn" onerror="this.style.display='none';document.getElementById('footBrand').style.display='block'" />
       <span class="brand-text" id="footBrand" style="display:none;color:#fff">The Smile Spot of Auburn</span>
-      <p>Family, cosmetic &amp; implant dentistry in Auburn &amp; Opelika, AL. Improving your quality of life.</p>
+      <p>Family, cosmetic, implant &amp; hygiene dentistry in Auburn, AL. Improving your quality of life.</p>
     </div>
     <nav class="footer__nav" aria-label="Footer">
       <div><h3>Services</h3><a href="#services">Family &amp; Preventive</a><a href="#services">Cosmetic &amp; Whitening</a><a href="#services">Invisalign®</a><a href="#services">Implants &amp; Surgery</a></div>
       <div><h3>Practice</h3><a href="#doctor">Dr. Tatum &amp; Dr. Cox</a><a href="#patient-info">New Patients</a><a href="#location">Contact</a><a href="#book">Book a Visit</a></div>
-      <div><h3>Visit</h3><address>614 Avenue A<br />Opelika, AL 36801<br /><a href="tel:+13347456393" style="color:var(--champagne)">334-745-6393</a></address></div>
+      <div><h3>Visit</h3><address>2900 East University Drive, Suite 110<br />Auburn, AL 36830<br /><a href="tel:+13347456393" style="color:var(--champagne)">334-745-6393</a></address></div>
     </nav>
   </div>
   <div class="footer__bar">
