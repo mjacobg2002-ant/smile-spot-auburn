@@ -180,8 +180,8 @@ body.menu-open{overflow:hidden}
 .hero__bg img,.hero__bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,22,38,.9) 0%,rgba(10,22,38,.55) 44%,rgba(10,22,38,.2) 100%),linear-gradient(180deg,rgba(10,22,38,.6),transparent 16%),linear-gradient(0deg,rgba(6,13,22,.78) 0%,rgba(6,13,22,.4) 14%,transparent 34%)}
 .hero__fallback{position:absolute;inset:0;background:radial-gradient(70% 70% at 82% 12%,rgba(255,145,102,.28),transparent 55%),radial-gradient(80% 80% at 15% 90%,rgba(46,155,255,.35),transparent 60%),linear-gradient(145deg,#0f2a4a 0%,var(--navy-900) 60%,#060d18 115%)}
-.hero__in{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter);min-height:88vh;display:flex;align-items:center}
-.hero__copy{max-width:640px;color:#fff;padding:8rem 0 4rem}
+.hero__in{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter);min-height:88vh;display:flex;flex-direction:column;justify-content:space-between}
+.hero__copy{max-width:640px;color:#fff;padding:7.5rem 0 1.4rem}
 .hero__badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);padding:.45rem .9rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;backdrop-filter:blur(4px)}
 .hero__badge svg{width:14px;height:14px;color:var(--champagne)}
 .hero h1{font-size:clamp(2.5rem,6vw,4.7rem);font-weight:700;color:#fff;margin:1.4rem 0 0;line-height:1.04;text-shadow:0 2px 30px rgba(6,13,22,.5)}
@@ -194,10 +194,10 @@ body.menu-open{overflow:hidden}
 .hero__cred svg{width:16px;height:16px;color:var(--champagne)}
 .hero__vsep{width:1px;height:20px;background:rgba(255,255,255,.3)}
 
-/* ===== STATS BAND ===== */
-.stats{position:relative;z-index:6;margin-top:calc(-1 * clamp(112px,14vh,132px));background:transparent}
+/* ===== STATS (float at the bottom of the hero, all layouts) ===== */
+.stats{position:relative;z-index:2;width:100%;background:transparent;padding-bottom:clamp(1.25rem,3.5vh,2.25rem)}
 .stats::before{content:none}
-.stats__grid{position:relative;max-width:var(--wrap);margin:0 auto;padding:1.15rem var(--gutter);display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem 2rem;max-width:none;margin:0;padding:0}
 .stat{text-align:center;color:#fff;text-shadow:0 2px 4px rgba(6,13,22,.6),0 4px 20px rgba(6,13,22,.75)}
 .stat .v{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1;color:#fff}
 .stat .v span{color:#ffc49e}
@@ -267,6 +267,19 @@ body.menu-open{overflow:hidden}
 /* gallery */
 .gallery{background:var(--cream)}
 .gal-grid{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+/* before/after whitening slider */
+.ba-wrap{max-width:760px;margin:3rem auto 0}
+.ba-head{text-align:center;margin-bottom:1.3rem}
+.ba-head .eyebrow{margin-bottom:.4rem}
+.ba{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lift);aspect-ratio:3/2;user-select:none;touch-action:none}
+.ba__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ba__before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0);z-index:1}
+.ba__handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;transform:translateX(-50%);z-index:3;box-shadow:0 0 12px rgba(6,13,22,.4);pointer-events:none}
+.ba__handle span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:0 4px 16px rgba(6,13,22,.35);display:grid;place-items:center;color:var(--brand);font-size:1.1rem;font-weight:800}
+.ba__range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:4}
+.ba__tag{position:absolute;top:1rem;z-index:2;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(6,13,22,.55);backdrop-filter:blur(4px);padding:.35rem .7rem;border-radius:999px}
+.ba__tag--before{left:1rem}
+.ba__tag--after{right:1rem}
 
 /* testimonials */
 .testi{background:var(--ivory);text-align:center}
@@ -344,13 +357,6 @@ body.menu-open{overflow:hidden}
   .steps,.exp-grid,.stats__grid{grid-template-columns:1fr 1fr;gap:1.5rem}
   .mobile-bar{display:grid}
   main{padding-bottom:66px}
-  /* On tablet/mobile the hero content is tall, so stop the stats from
-     overlapping the hero — render them as a solid sky-blue band below it. */
-  .stats{margin-top:0;background:linear-gradient(135deg,#8cccff,#64b5f3)}
-  .stat{color:var(--navy-900);text-shadow:none}
-  .stat .v{color:var(--navy-900)}
-  .stat .v span{color:#d6601c}
-  .stat .l{color:rgba(10,22,38,.78)}
 }
 @media (max-width:760px){
   .two-col{grid-template-columns:1fr;gap:2.2rem}
@@ -433,8 +439,10 @@ body.menu-open{overflow:hidden}
 <section class="hero">
   <div class="hero__bg">
     <div class="hero__fallback"></div>
-    <img src="assets/img/hero.jpg" alt="" aria-hidden="true" onerror="this.style.display='none'" />
-    <!-- <video autoplay muted loop playsinline poster="assets/img/hero.jpg" aria-hidden="true"><source src="assets/img/hero.mp4" type="video/mp4"></video> -->
+    <picture>
+      <source media="(max-width:760px)" srcset="assets/img/hero-mobile.jpg" />
+      <img src="assets/img/hero.jpg" alt="" aria-hidden="true" onerror="this.style.display='none'" />
+    </picture>
   </div>
   <div class="hero__in">
     <div class="hero__copy">
@@ -457,17 +465,16 @@ body.menu-open{overflow:hidden}
         <span class="hero__cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>Family, cosmetic, implant &amp; hygiene dentistry with Dr. Tatum &amp; Dr. Cox</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== STATS BAND ===== -->
-<section class="stats" aria-label="Practice at a glance">
-  <div class="stats__grid">
-    <!-- EDIT: your real numbers -->
-    <div class="stat"><div class="v">96<span> yrs</span></div><div class="l">Of Trusted Care in the Area</div></div>
-    <div class="stat"><div class="v">Full<span>-Service</span></div><div class="l">Hygiene &amp; Dentistry</div></div>
-    <div class="stat"><div class="v">All<span> Ages</span></div><div class="l">Family-Friendly Care</div></div>
-    <div class="stat"><div class="v">New<span> Patients</span></div><div class="l">Always Welcome</div></div>
+    <!-- Stats float over the bottom of the hero image on every layout -->
+    <div class="stats" aria-label="Practice at a glance">
+      <div class="stats__grid">
+        <!-- EDIT: your real numbers -->
+        <div class="stat"><div class="v">96<span> yrs</span></div><div class="l">Of Trusted Care in the Area</div></div>
+        <div class="stat"><div class="v">Full<span>-Service</span></div><div class="l">Hygiene &amp; Dentistry</div></div>
+        <div class="stat"><div class="v">All<span> Ages</span></div><div class="l">Family-Friendly Care</div></div>
+        <div class="stat"><div class="v">New<span> Patients</span></div><div class="l">Always Welcome</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -594,6 +601,22 @@ body.menu-open{overflow:hidden}
       <figure class="figpanel ratio-1-1 reveal"><img src="assets/img/office-2.jpg" alt="A happy patient smile" onerror="this.style.display='none'" /></figure>
       <figure class="figpanel ratio-1-1 reveal"><img src="assets/img/office-3.jpg" alt="Brighter smiles with professional whitening" onerror="this.style.display='none'" /></figure>
     </div>
+
+    <!-- Before / After whitening slider (drag the handle) -->
+    <div class="ba-wrap reveal">
+      <div class="ba-head">
+        <span class="eyebrow">Real results</span>
+        <h3 class="section-title" style="font-size:clamp(1.5rem,1.1rem+1.6vw,2.2rem);margin-top:.6rem">See the difference — professional whitening.</h3>
+      </div>
+      <div class="ba" id="ba">
+        <img class="ba__img ba__after" src="assets/img/after.jpg" alt="Smile after professional whitening" />
+        <img class="ba__img ba__before" src="assets/img/before.jpg" alt="Smile before whitening" />
+        <span class="ba__tag ba__tag--before">Before</span>
+        <span class="ba__tag ba__tag--after">After</span>
+        <div class="ba__handle" aria-hidden="true"><span>⟷</span></div>
+        <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after whitening" />
+      </div>
+    </div>
   </div>
 </section>
 
@@ -713,6 +736,13 @@ body.menu-open{overflow:hidden}
     setTimeout(revealAll, 1500);
   } else { revealAll(); }
   document.getElementById('year').textContent=new Date().getFullYear();
+  // Before/After whitening slider
+  var ba=document.getElementById('ba');
+  if(ba){ var baR=ba.querySelector('.ba__range'); var baH=ba.querySelector('.ba__handle');
+    function baSet(v){ ba.style.setProperty('--pos', v+'%'); }
+    baR.addEventListener('input', function(){ baSet(baR.value); });
+    baSet(baR.value);
+  }
 })();
 </script>
 </body>
